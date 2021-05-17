@@ -20,7 +20,7 @@ if __name__ == "__main__":
         logging.getLogger().setLevel(logging.INFO)
 
     if args.time is not None:
-        time = int(args.time)
+        time = args.time
 
     else:
         time = 21600  # default to 6 hrs

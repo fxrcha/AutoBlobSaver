@@ -23,6 +23,7 @@ def option_parser():
         help="override time to check new IPSW (in seconds, default: 6 hours - 21600)",
         dest="check_time",
         default=None,
+        type=int,
     )
 
     return parser
