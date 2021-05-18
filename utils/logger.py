@@ -4,7 +4,7 @@ import sys
 import colorlog
 
 FORMATTER = colorlog.ColoredFormatter(
-    "%(bold)s%(log_color)s%(levelname)s%(reset)s [%(asctime)s] [%(name)s:%(bold)s%(module)s%(reset)s] : %(message)s",
+    "%(bold)s%(log_color)s%(levelname)s%(reset)s [%(asctime)s] [%(name)s:%(bold)s%(module)s%(reset)s] %(message)s",
     datefmt=None,
     reset=True,
     log_colors={
