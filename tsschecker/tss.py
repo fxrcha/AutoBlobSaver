@@ -11,8 +11,6 @@ class TSSSaver:
         self.client = Client()
         self.logger = Logger.generate("TSS")
         self.config = config
-        self.boardconfigs = {}
-        self.platforms = {}
 
     async def save_blob(self, target, version: str):
         self.logger.info(f"Starting tsschecker for {target['name']}, iOS {version}")
@@ -55,7 +53,7 @@ class TSSSaver:
                     and device_data.firmwares[0].signed
                 ):
                     self.logger.info(
-                        f"Higher version detected for {device_data.name} (or first try)"
+                        f"Higher signed version detected for {device_data.name} (or first try)"
                     )
                     await self.save_blob(device, now_ver[identifier])
 
